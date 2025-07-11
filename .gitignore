@@ -1,0 +1,26 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.env
+.env.*
+
+# Alembic
+alembic/versions/*.pyc
+alembic/__pycache__/
+
+# Editor folders
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+
+# Database (optional)
+*.sqlite3
+
+# Log files
+*.log
