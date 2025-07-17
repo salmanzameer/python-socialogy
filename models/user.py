@@ -1,5 +1,6 @@
 from sqlalchemy import Column, Integer, String, Boolean
 from database import Base
+from sqlalchemy.orm import relationship
 
 class User(Base):
     __tablename__ = "users"
@@ -10,4 +11,7 @@ class User(Base):
     dob = Column(String, nullable=False)
     gender = Column(String, nullable=False)
     is_active = Column(Boolean, nullable=False)
-    
+    email = Column(String, nullable=False)
+    blogs = relationship("Blog", back_populates="user")   
+     
+
