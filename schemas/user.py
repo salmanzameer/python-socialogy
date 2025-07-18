@@ -11,6 +11,7 @@ class UserBase(BaseModel):
     email: str
     
 class UserCreate(UserBase):
+  password: str
   pass
 
 class UserResponse(UserBase):
@@ -19,5 +20,5 @@ class UserResponse(UserBase):
   status: str
   blogs: List[BlogBase] = []
   class Config:
-    orm_mode = True
+    from_attributes = True
   
