@@ -11,7 +11,7 @@ class User(Base):
     dob = Column(String, nullable=False)
     gender = Column(String, nullable=False)
     is_active = Column(Boolean, nullable=False)
-    email = Column(String, nullable=False)
+    email = Column(String, nullable=False, unique=True)
     blogs = relationship("Blog", back_populates="user")   
-     
+    password = Column(String, nullable=False)     
 
